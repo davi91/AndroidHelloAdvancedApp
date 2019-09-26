@@ -32,29 +32,33 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        nameText = (EditText) findViewById(R.id.nameTxt);
-
-        helloText = (TextView) findViewById(R.id.helloTxt);
-
-        greetBt = (Button) findViewById(R.id.welcomeBt);
-
-        image = (ImageView) findViewById(R.id.imgSwitch);
+        // Cargamos las variables
+        nameText = findViewById(R.id.nameTxt);
+        helloText =  findViewById(R.id.helloTxt);
+        greetBt =  findViewById(R.id.welcomeBt);
+        image =  findViewById(R.id.imgSwitch);
 
     }
 
     public void onGreetBtPressed(View view) { // Podemos usar el XML para llamar a un evento aquí
-        helloText.setText(String.format("Hello %s", nameText.getText()));
+        String msg;
 
+        // Usamos el calendario para obtener la hora del día
         Calendar cal = Calendar.getInstance();
         int hour = cal.get(Calendar.HOUR_OF_DAY);
 
         if( hour < 12 ) {
             image.setImageResource(R.drawable.amanecer);
+            msg = getString(R.string.morning);
         } else if( hour < 19 ) {
             image.setImageResource(R.drawable.atardecer);
+            msg = getString(R.string.afternoon);
         } else {
             image.setImageResource(R.drawable.anochecer);
+            msg = getString(R.string.night);
         }
+
+        helloText.setText(String.format("%s %s\n%s", getString(R.string.hello), nameText.getText(), msg));
 
     }
 

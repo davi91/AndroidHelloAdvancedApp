@@ -12,6 +12,7 @@
         android:id="@+id/helloTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:textColor="#2196F3"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:ems="10"
-        android:hint="Put here your name"
+        android:hint="@string/promptHelp"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,8 +38,8 @@
         android:id="@+id/welcomeBt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="greet"
         android:onClick="onGreetBtPressed"
+        android:text="@string/greet"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameTxt" />
 

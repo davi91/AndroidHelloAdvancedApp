@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">HelloWorldAdvanced</string>
     <string name="action_settings">Settings</string>
+    <string name="hello">Hola</string>
+    <string name="promptHelp">Pon tu nombre</string>
+    <string name="greet">SALUDAR</string>
+    <string name="morning">Buenos dias</string>
+    <string name="afternoon">Buenas tardes</string>
+    <string name="night">Buenas noches</string>
 </resources>
